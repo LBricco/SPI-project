@@ -1,0 +1,35 @@
+{signal: 
+ [
+    {name: 'CK',      wave: '0101010101010101010101010101010101010101010101010101010', phase: 0.5, period: 0.5},
+    {name: 'SCK',     wave: '01....0....1....0....1....0'},
+    {name: 'SCK_HIx', wave: '0..10........10........10..', node: '...E', phase: -0.25},
+    {name: 'SCK_LOx', wave: '0.......10........10.......', phase: -0.25},
+    {name: 'PS',      wave: '4.7.7...7.7.................7.7.................7.7...', data: 'LOy HIx HIy MSB DOUT_MUX SFT DOUT_MUX SFT DOUT_MUX', period: 0.5},
+    {name: 'nSS',     wave: '0..........................', phase: -0.25},
+   {name: 'S_MISO',  wave: '0....1.....................', phase: -0.25},
+    {name: 'MISO',    wave: 'z....7.........7.........7.', node: '.....D.........G', data: 'DOUT<sub>15</sub> DOUT<sub>14</sub> DOUT<sub>13</sub>', phase: -0.25},
+    {name: 'MOSI',    wave: '4..........................', data: 'A<sub>0</sub>', phase: -0.25},
+    {name: 'DOUT',    wave: 'x..7.......................', node: '...B', data: 'DOUT', phase: -0.25},
+    {name: 'LD_DOUT', wave: '0.1.0......................', phase: -0.25},
+    {name: 'SE_DOUT', wave: '0...10........10........10.', node: '....C.........F', phase: -0.25},
+    {name: 'CNT_EN',  wave: '0...10........10........10.', phase: -0.25},
+    {name: 'CNT',     wave: '4....7.........7.........7.', data: '15 16 17 18', phase: -0.25},  
+    {name: 'TC8',     wave: '0..........................', phase: -0.25},
+    {name: 'TC16',    wave: '1....0.....................', phase: -0.25},
+    {name: 'TC32',    wave: '0..........................', phase: -0.25},
+    {name: 'R_EN',    wave: '1..........................', phase: -0.25},
+    {name: 'RD',      wave: '0.1.0......................', node: '..A', phase: -0.25},
+  ], 
+   
+   config: { hscale: 1 },
+ 
+ head:{
+   tock:164,
+   every:1
+ },
+   
+   edge: [
+    'A-~>B', 'C-~>D', 'E-~>D', 'F-~>G'
+  ]
+ 
+}

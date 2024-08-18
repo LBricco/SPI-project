@@ -1,0 +1,35 @@
+{signal: 
+  [
+    {name: 'CK',          wave: '0101010101010101010101010101010101010101010101010101010', phase: 0.5, period: 0.5},
+    {name: 'SCK',         wave: '0.1....0....1....0....1....'},
+    {name: 'SCK_HIx',     wave: '0...10........10........10.', node: '..............X', phase: -0.25},
+    {name: 'SCK_LOx',     wave: '0........10........10......', phase: -0.25},
+    {name: 'PS',          wave: '33.3.3.....3.3.......3.3.3.....3.3.......3.3.3.3...3.4.', data: '. LOx LOy CMD_SCK_LOz CUP CMD_SCK_HI LOx LOy CMD_SCK_LOz CUP CMD_SCK_HI LOx LOy CMD LOz CUP HI...', phase: 0.5, period: 0.5},
+    {name: 'nSS',         wave: '0..........................', phase: -0.25},
+    {name: 'MISO',        wave: 'z..........................', phase: -0.25},
+    {name: 'MOSI',        wave: '3.3.........3.........4....', data: 'CMD<sub>2</sub> CMD<sub>1</sub> CMD<sub>0</sub> A<sub>7</sub>', phase: -0.25},
+    {name: 'SE_CMD',      wave: '0.........10........10.....', phase: -0.25},
+    {name: 'CMD_SR_OUT',  wave: '33.........3.........3.....', data: '...CMD<sub>3</sub> xxCMD<sub>7</sub>...CMD<sub>2</sub> xCMD<sub>7</sub>...CMD<sub>1</sub> CMD', phase: -0.25},
+    {name: 'CMD_EN',      wave: '0.....................10...', node: '......................P', phase: -0.25},
+    {name: 'CMD_OUT',     wave: 'x......................3...', node: '.......................M', data: 'CMD', phase: -0.25},
+    {name: 'CNT_EN',      wave: '0....10........10........10', node: '...........G...K', phase: -0.25},
+    {name: 'CNT',         wave: '3.....3.........3.........4', node: '................', data: '5 6 7 8', phase: -0.25},  
+    {name: 'TC8',         wave: '0...............1.........0', node: '................L', phase: -0.25},
+    {name: 'TC16',        wave: '0..........................', phase: -0.25},
+    {name: 'TC32',        wave: '0..........................', phase: -0.25},
+    {name: 'W_EN',        wave: 'x......................1...', node: '.......................N', phase: -0.25},
+    {name: 'WR',          wave: '0..........................', phase: -0.25},
+    {name: 'R_EN',        wave: 'x......................0...', node: '...........................O', phase: -0.25},
+    {name: 'RD',          wave: '0..........................', phase: -0.25},
+  ], 
+   
+  config: { hscale: 1 },
+     
+  head:{
+     tock:63,
+     every:1
+  },
+     
+  edge: ['D~>X', 'X-~>K', 'U-~>E', 'S~>J', 'G~>H', 'K-~>L', 'P-~>M', 'P-~>N'],
+ 
+}

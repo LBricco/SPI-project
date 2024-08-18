@@ -1,0 +1,35 @@
+{signal: 
+  [
+    {name: 'CK',          wave: '0101010101010101010101010101010101010101010101010101010', phase: 0.5, period: 0.5},
+    {name: 'SCK',         wave: '01....0....1....0....1....0'},
+    {name: 'SCK_HIx',     wave: '0..10........10........10..', node: '...D.........F', phase: -0.25},
+    {name: 'SCK_LOx',     wave: '0.......10........10.......', node: '........A', phase: -0.25},
+    {name: 'PS',          wave: '3.3.3...3.4.......4.4.4.....4.4.......4.4.4.....4.4...', data: 'LOy UPC LOz CUP ADD_SCK_HI LOx LOy ADD_SCK_LOz CUP ADD_SCK_HI LOx LOy ADD_SCK_LOz CUP HI', node: '..............................G', period: 0.5},
+    {name: 'nSS',         wave: '0..........................', phase: -0.25},
+    {name: 'MISO',        wave: 'z..........................', phase: -0.25},
+    {name: 'MOSI',        wave: '34.........4.........4.....', data: 'CMD<sub>0</sub> A<sub>7</sub> A<sub>6</sub> A<sub>5</sub>', phase: -0.25},
+    {name: 'SE_ADD',      wave: '0........10........10......', node: '.........B', phase: -0.25},
+    {name: 'ADD_SR_OUT',  wave: 'x.........4.........4......', node: '..........C', data: 'xxxxxxxA<sub>7</sub> xxxxxxA<sub>7</sub>A<sub>6</sub>', phase: -0.25},
+    {name: 'ADD_EN',      wave: '0..........................', phase: -0.25},	
+    {name: 'A',           wave: 'x..........................', phase: -0.25},
+    {name: 'CNT_EN',      wave: '0...10........10........10.', node: '....E', phase: -0.25},
+    {name: 'CNT',         wave: '3....4.........4.........4.', data: '7 8 9 10', phase: -0.25},  
+    {name: 'TC8',         wave: '1....0.....................', phase: -0.25},
+    {name: 'TC16',        wave: '0..........................', phase: -0.25},
+    {name: 'TC32',        wave: '0..........................', phase: -0.25},
+    {name: 'W_EN',        wave: '1..........................', phase: -0.25},
+    {name: 'WR',          wave: '0..........................', phase: -0.25},
+  ], 
+     
+  config: { hscale: 1 },
+   
+  head:{
+     tock:84,
+     every:1
+  },
+    
+  edge: [
+    'A-~>B', 'B-~>C', 'D-~>E', 'F-~>G'
+  ]
+ 
+}

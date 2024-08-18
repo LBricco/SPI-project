@@ -1,0 +1,35 @@
+{signal: 
+  [
+    {name: 'CK',          wave: '0101010101010101010101010101010101010101010101010101010', phase: 0.5, period: 0.5},
+    {name: 'SCK',         wave: '0.1....0....1....0....1....'},
+    {name: 'SCK_HIx',     wave: '0...10........10........10.', phase: -0.25},
+    {name: 'SCK_LOx',     wave: '0........10........10......', phase: -0.25},
+    {name: 'PS',          wave: '4.4.4.....4.4.......4.4.4.....4.4.......4.4.5.....5.5.', data: 'LOx LOy ADD_SCK_LOz CUP ADD_SCK_HI LOx LOy ADD_SCK_LOz CUP ADD_SCK_HI LOx LOy DIN_WAIT_HI UPC HI', node: '............................................Y', period: 0.5},
+    {name: 'nSS',         wave: '0..........................', phase: -0.25},
+    {name: 'MISO',        wave: 'z..........................', phase: -0.25},
+    {name: 'MOSI',        wave: '4.4.........4.........5....', data: 'A<sub>2</sub> A<sub>1</sub> A<sub>0</sub> DIN<sub>15</sub>', phase: -0.25},
+    {name: 'SE_ADD',      wave: '10........10........10.....', phase: -0.25},
+    {name: 'ADD_SR_OUT',  wave: '44.........4.........4.....', data: '...A<sub>3</sub> xxA<sub>7</sub>...A<sub>2</sub> xA<sub>7</sub>...A<sub>1</sub> A', phase: -0.25},
+    {name: 'ADD_EN',      wave: '0..........................', phase: -0.25},	
+    {name: 'A',           wave: 'x..........................', phase: -0.25},
+    {name: 'CNT_EN',      wave: '0....10........10........10', phase: -0.25},
+    {name: 'CNT',         wave: '4.....4.........4.........5', data: '13 14 15 16', phase: -0.25},  
+    {name: 'TC8',         wave: '0..........................', phase: -0.25},
+    {name: 'TC16',        wave: '0...............1.........0', node: '................X', phase: -0.25},
+    {name: 'TC32',        wave: '0..........................', phase: -0.25},
+    {name: 'W_EN',        wave: '1..........................', phase: -0.25},
+    {name: 'WR',          wave: '0..........................', phase: -0.25},
+  ], 
+     
+  config: { hscale: 1 },
+   
+  head:{
+     tock:143,
+     every:1
+  },
+    
+    edge: [
+    'X-~>Y'
+  ]
+ 
+}
